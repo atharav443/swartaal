@@ -1,0 +1,50 @@
+name: NPM Publish
+
+# 1. Define the trigger for the workflow 
+on:
+   # Trigger on push to master (direct pushes or merge commits)
+   push:
+      branches:
+         - master
+   # Trigger on pull request events targeting master
+   pull_request:
+      types:
+         - closed
+      branches:
+         - master
+
+# 2. Define the jobs to be executed
+jobs:
+   #Name of the job
+   publish-to-npm:
+      # Run the job on latest version of ubuntu
+      runs-on: ubuntu-latest
+   
+      #steps to execute in the job
+      steps:
+         #Step 1: Checkout the repository code
+         - name: Checkout Code
+           uses: actions/checkout@v4
+
+         #Step 2: Setup Node.js environment
+         - name : Set up Node js
+           uses : actions/setup-node@v4
+           with : 
+               node-version : '20'
+               registry-url : 'https://registry.npmjs.org'
+
+         #Step 3: Install dependencies 
+         - name : Install dependencies
+           run  : npm install
+
+         # Step 4: Build TypeScript
+         - name : Build TypeScript
+           run  : npm run build
+
+
+         # Step 5: Publish package to npm
+             # - name : Publish to npm
+             #   run  : npm publish --access public
+             #   env  :
+             #    # Add the Authenication Token
+             #    NPM_TOKEN : ${{ secrets.NPM_TOKEN }}
