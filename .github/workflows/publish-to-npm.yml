@@ -2,16 +2,16 @@ name: NPM Publish
 
 # 1. Define the trigger for the workflow 
 on:
-   # Trigger on push to master (direct pushes or merge commits)
+   # Trigger on push to master or main (direct pushes or merge commits)
    push:
       branches:
-         - master
-   # Trigger on pull request events targeting master
+         - main
+   # Trigger on pull request events targeting master or main
    pull_request:
       types:
          - closed
       branches:
-         - master
+         - main
 
 # 2. Define the jobs to be executed
 jobs:
