@@ -2,11 +2,11 @@ name: NPM Publish
 
 # 1. Define the trigger for the workflow 
 on:
-   # Trigger on push to master or main (direct pushes or merge commits)
+   # Trigger on push to main (direct pushes or merge commits)
    push:
       branches:
          - main
-   # Trigger on pull request events targeting master or main
+   # Trigger on pull request events targeting main
    pull_request:
       types:
          - closed
@@ -19,7 +19,11 @@ jobs:
    publish-to-npm:
       # Run the job on latest version of ubuntu
       runs-on: ubuntu-latest
-   
+      # Only run this job for merged PRs targeting `main` or direct pushes to `main`.
+      if: >-
+        (github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main') ||
+        (github.event_name == 'push' && github.ref == 'refs/heads/main')
+
       #steps to execute in the job
       steps:
          #Step 1: Checkout the repository code
