@@ -1,6 +1,6 @@
-import { SwarOptions } from './types';
+import { SwarOptions, ISwar } from './types';
 
-export class Swar {
+export class Swar implements ISwar {
     private text: string;
     private duration: number;
     private options: SwarOptions;
@@ -29,7 +29,7 @@ export class Swar {
         return `<swar ${octaveAttr} ${komalAttr} ${tivraAttr} ${durationAttr}>${this.text}</swar>`;
     }
 
-    getswar(): string {
+    getText(): string {
         return this.text;
     }
 }

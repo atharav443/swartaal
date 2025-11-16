@@ -1,4 +1,6 @@
-export class Lyric {
+import { ILyric } from './types';
+
+export class Lyric implements ILyric {
   private text: string;
 
   constructor(text: string) {
@@ -6,10 +8,10 @@ export class Lyric {
   }
 
   toXML(): string {
-    return `<lyric>${this.text}</lyric`;
+    return `<lyric>${this.text}</lyric>`;
   }
 
-  getLyric(): string {
+  getText(): string {
     return this.text;
   }
 }
