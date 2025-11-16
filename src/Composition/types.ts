@@ -1,5 +1,5 @@
-type Octave = 'lower' | 'middle' | 'lower';
-type TaalTypes = 'teentaal' | 'ektaal' | 'jhaptaal' | 'rupak';
+export type Octave = 'lower' | 'middle' | 'lower';
+export type TaalTypes = 'teentaal' | 'ektaal' | 'jhaptaal' | 'rupak';
 
 export interface NoteOptions {
   octave?: Octave;

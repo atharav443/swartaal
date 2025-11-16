@@ -1,11 +1,13 @@
 import { NoteOptions } from './types';
 
-export class Note {
-  private swar: string;
+export class Swar {
+  private text: string;
+  private duration: number;
   private options: NoteOptions;
 
-  constructor(swar: string, options: NoteOptions) {
-    this.swar = swar;
+  constructor(text: string, duration: number, options: NoteOptions) {
+    this.text = text;
+    this.duration = duration;
     this.options = {
       octave: options.octave || 'middle',
       komal: options.komal || false,
@@ -20,11 +22,14 @@ export class Note {
         : '';
     const komalAttr = this.options.komal ? ` komal="true" ` : '';
     const tivraAttr = this.options.tivra ? ` tivra="true" ` : '';
+    const durationAttr = this.duration
+      ? `duration="${this.duration}"`
+      : `duration = "1"`;
 
-    return `<note ${octaveAttr} ${komalAttr} ${tivraAttr}>${this.swar}</note>`;
+    return `<swar ${octaveAttr} ${komalAttr} ${tivraAttr} ${durationAttr}>${this.text}</swar>`;
   }
 
   getswar(): string {
-    return this.swar;
+    return this.text;
   }
 }
