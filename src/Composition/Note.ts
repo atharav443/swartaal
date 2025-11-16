@@ -1,6 +1,6 @@
 import { NoteOptions } from './types';
 
-class Note {
+export class Note {
     private swar: string ;
     private options: NoteOptions;
 
