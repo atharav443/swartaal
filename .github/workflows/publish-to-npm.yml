@@ -2,10 +2,11 @@ name: NPM Publish
 
 # 1. Define the trigger for the workflow 
 on:
-   # Trigger on push to main (direct pushes or merge commits)
+   # Trigger on push to main (direct pushes or merge commits) and feature branches
    push:
       branches:
          - main
+         - 'feature/**'
    # Trigger on pull request events targeting main
    pull_request:
       types:
@@ -19,10 +20,6 @@ jobs:
    publish-to-npm:
       # Run the job on latest version of ubuntu
       runs-on: ubuntu-latest
-      # Only run this job for merged PRs targeting `main` or direct pushes to `main`.
-      if: >-
-        (github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main') ||
-        (github.event_name == 'push' && github.ref == 'refs/heads/main')
 
       #steps to execute in the job
       steps:
@@ -46,9 +43,10 @@ jobs:
            run  : npm run build
 
 
-         # Step 5: Publish package to npm
-             # - name : Publish to npm
-             #   run  : npm publish --access public
-             #   env  :
-             #    # Add the Authenication Token
-             #    NPM_TOKEN : ${{ secrets.NPM_TOKEN }}
+         # Step 5: Publish package to npm (only on main branch)
+         - name: Publish to npm
+           if: github.ref == 'refs/heads/main'
+           run: npm publish --access public
+           env:
+            # Add the Authenication Token
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
