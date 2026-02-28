@@ -7,11 +7,19 @@ export interface SwarOptions {
   tivra?: boolean;
 }
 
-export interface Metadata {
-  title?: string;
-  raga?: string;
-  tala?: string;
+export interface Taal {
+  name: TaalTypes;
+  totalmatras?: number;
+  khands?: number;
 }
+
+export interface TaalInfo {
+  name: TaalTypes;
+  totalmatras: number;
+  khands: number;
+  khandmatras: number[];
+}
+export interface IMetadata extends IXMLSerializable { }
 
 // Interface Contracts
 export interface IXMLSerializable {
@@ -26,7 +34,7 @@ export interface ILyric extends IXMLSerializable {
   getText(): string;
 }
 
-export interface IMatra extends IXMLSerializable {}
+export interface IMatra extends IXMLSerializable { }
 
 export interface IKhand extends IXMLSerializable {
   addMatra(matra: IMatra): void;
