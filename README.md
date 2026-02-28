@@ -1,10 +1,10 @@
-# Hindustani Notation
+# Swartaal - Hindustani Classical Music Notation
 
 Generate Hindustani classical music notation in XML format.
 
 ## Installation
 ```bash
-npm install hindustani-notation
+npm install swartaal
 ```
 
 ## Project Structure
@@ -14,36 +14,37 @@ The library is organized around the following hierarchical model of Hindustani c
 ![Hindustani Composition Architecture](./docs/architecture.png)
 
 ### Hierarchy Breakdown
+
+```
+Hindustani-Composition
 │
 ├── MetaData
 │   ├── Title
 │   ├── Raag
 │   └── Taal
 │
-├── Section (स्थायी / अंतरा)
-│   ├── Attribute: Name, Start-matra
-│   └── Child Elements: Line[]
-│       │
-│       └── Line
-│           ├── Attribute: Index
-│           └── Child Elements: Khand[]
-│               │
-│               └── Khand
-│                   ├── Attribute: Index
-│                   └── Child Elements: Matra[]
-│                       │
-│                       └── Matra
-│                           ├── Attribute: index
-│                           └── Child Elements:
-│                               ├── Swar (with attributes: duration, octave, komal, tivra)
-│                               ├── Lyric (text content)
-│                               └── Taalmarker (text content)
+└── Section (स्थायी / अंतरा)
+    ├── Attribute: Name
+    ├── Attribute: Start-matra
+    └── Child Elements: Line[]
+        │
+        └── Line
+            ├── Attribute: Index
+            └── Child Elements: Khand[]
+                │
+                └── Khand
+                    ├── Attribute: Index
+                    └── Child Elements: Matra[]
+                        │
+                        └── Matra
+                            ├── Attribute: index
+                            └── Child Elements:
+                                ├── Swar (attributes: duration, octave, komal, tivra)
+                                ├── Lyric (text content)
+                                └── Taalmarker (text content)
 ```
 
-### Hierarchy Breakdown
-
-```
-Hindustani-Composition
+### Core Components
 
 - **MetaData**: Title, Raag, and Taal information
 - **Section**: Major sections like स्थायी (Sthayi) and अंतरा (Antara)
@@ -55,6 +56,7 @@ Hindustani-Composition
 - **Taalmarker**: Rhythm cycle markers (Sam, Khali, etc.)
 
 ## Usage
+
 ```typescript
 import { Swar, Lyric, Matra, Khand, Taal } from 'swartaal';
 
@@ -81,7 +83,36 @@ console.log(taal.toXML());
 
 ## API Documentation
 
-[Add your API docs here]
+### Swar Class
+```typescript
+new Swar(text: string, duration: number, options: SwarOptions): Swar
+```
+
+### Lyric Class
+```typescript
+new Lyric(text: string): Lyric
+```
+
+### Matra Class
+```typescript
+new Matra(index: string, taalmarker: string, swar: Swar, lyric: Lyric): Matra
+```
+
+### Khand Class
+```typescript
+new Khand(index: string, matras: Matra[]): Khand
+addMatra(matra: Matra): void
+getMatras(): Matra[]
+```
+
+### Taal Class
+```typescript
+new Taal(taalType: TaalTypes): Taal
+getTaalName(): TaalTypes
+getTotalMatras(): number
+getKhands(): number
+getKhandMatras(): number[]
+```
 
 ## License
 
