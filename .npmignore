@@ -1,7 +1,8 @@
 tsconfig.json
 node_modules/
 .gitignore
-src/
+main/
+test/
 .prettierrc
 .prettierignore
 .github/

@@ -9,8 +9,8 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\""
+    "format": "prettier --write \"main/src/**/*.ts\"",
+    "format:check": "prettier --check \"main/src/**/*.ts\""
   },
   "keywords": [
     "hindustani",
