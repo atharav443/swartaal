@@ -1,5 +1,5 @@
 import { TaalTypes, TaalInfo as ITaalInfo, IXMLSerializable } from './types';
-import { TAAL_CONFIG } from './taalConfig';
+import { TAAL_CONFIG } from './TaalConfig';
 
 export class Taal implements IXMLSerializable {
     private name: TaalTypes;
