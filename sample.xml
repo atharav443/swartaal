@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hindustani-composition>
+  <metadata>
+    <title>Bandish Name</title>
+    <raag>Yaman</raag>
+    <tala name="Teentaal" total-matras="16" khands="4"/>
+  </metadata>
+  
+  <!-- STHAYI SECTION -->
+  <section name="स्थायी" start-matra="9">
+    
+    <!-- LINE 1: Starts from matra 9 (Khand 3) -->
+    <line number="1">
+      
+      <!-- KHAND 3: Matras 9-12 (FIRST KHAND because start-matra=9) -->
+      <khand index="3">
+        <matra index="9">
+          <tala-marker>0</tala-marker>  <!-- Khali marker -->
+          <swar duration="1">प</swar>
+          <lyric>सा</lyric>
+        </matra>
+        
+        <matra index="10">
+          <swar duration="1">ध</swar>
+          <lyric>री</lyric>
+        </matra>
+        
+        <matra index="11">
+          <swar duration="1">नि</swar>
+          <lyric>ग</lyric>
+        </matra>
+        
+        <matra index="12">
+          <swar duration="0.5" octave="higher">सां</swar>
+          <lyric>म</lyric>
+          
+          <swar duration="0.5">नि</swar>
+          <lyric>प</lyric>
+        </matra>
+      </khand>
+      
+      <!-- KHAND 4: Matras 13-16 -->
+      <khand index="4">
+        <matra index="13">
+          <tala-marker>3</tala-marker>
+          <swar duration="1">ध</swar>
+          <lyric>ध</lyric>
+        </matra>
+        
+        <matra index="14">
+          <swar duration="1">प</swar>
+          <lyric>नि</lyric>
+        </matra>
+        
+        <matra index="15">
+          <swar duration="1">म</swar>
+          <lyric>सां</lyric>
+        </matra>
+        
+        <matra index="16">
+          <swar duration="1">ग</swar>
+          <lyric>रे</lyric>
+        </matra>
+      </khand>
+      
+      <!-- KHAND 1: Matras 1-4 (Wraps around to Sam) -->
+      <khand index="1">
+        <matra index="1">
+          <tala-marker>X</tala-marker>  <!-- Sam -->
+          <swar duration="1">रे</swar>
+          <lyric>सा</lyric>
+        </matra>
+        
+        <matra index="2">
+          <swar duration="1">सा</swar>
+          <lyric>नि</lyric>
+        </matra>
+        
+        <matra index="3">
+          <swar duration="1" octave="lower">नि</swar>
+          <lyric>ध</lyric>
+        </matra>
+        
+        <matra index="4">
+          <swar duration="1" octave="lower">ध</swar>
+          <lyric>प</lyric>
+        </matra>
+      </khand>
+      
+      <!-- KHAND 2: Matras 5-8 -->
+      <khand index="2">
+        <matra index="5">
+          <tala-marker>2</tala-marker>
+          <swar duration="1">प</swar>
+          <lyric>म</lyric>
+        </matra>
+        
+        <matra index="6">
+          <swar duration="1">म</swar>
+          <lyric>ग</lyric>
+        </matra>
+        
+        <matra index="7">
+          <swar duration="1">ग</swar>
+          <lyric>रे</lyric>
+        </matra>
+        
+        <matra index="8">
+          <swar duration="1">रे</swar>
+          <lyric>सा</lyric>
+        </matra>
+      </khand>
+      
+    </line>
+    
+    <!-- LINE 2: Also starts from matra 9 (same pattern) -->
+    <line number="2">
+      
+      <!-- KHAND 3: Matras 9-12 (FIRST) -->
+      <khand index="3">
+        <matra index="9">
+          <tala-marker>0</tala-marker>
+          <swar duration="1">म</swar>
+          <lyric>आ</lyric>
+        </matra>
+        <!-- ... matras 10-12 -->
+      </khand>
+      
+      <!-- KHAND 4: Matras 13-16 -->
+      <khand index="4">
+        <matra index="13">
+          <tala-marker>3</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 14-16 -->
+      </khand>
+      
+      <!-- KHAND 1: Matras 1-4 -->
+      <khand index="1">
+        <matra index="1">
+          <tala-marker>X</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 2-4 -->
+      </khand>
+      
+      <!-- KHAND 2: Matras 5-8 -->
+      <khand index="2">
+        <matra index="5">
+          <tala-marker>2</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 6-8 -->
+      </khand>
+      
+    </line>
+    
+  </section>
+  
+  <!-- ANTARA SECTION -->
+  <section name="अंतरा" start-matra="13">
+    
+    <!-- LINE 1: Starts from matra 13 (Khand 4) -->
+    <line number="1">
+      
+      <!-- KHAND 4: Matras 13-16 (FIRST KHAND because start-matra=13) -->
+      <khand index="4">
+        <matra index="13">
+          <tala-marker>3</tala-marker>
+          <swar duration="1" octave="higher">सां</swar>
+          <lyric>उ</lyric>
+        </matra>
+        
+        <matra index="14">
+          <swar duration="1">नि</swar>
+          <lyric>ड़े</lyric>
+        </matra>
+        
+        <matra index="15">
+          <swar duration="1">ध</swar>
+          <lyric>री</lyric>
+        </matra>
+        
+        <matra index="16">
+          <swar duration="1">प</swar>
+          <lyric>हे</lyric>
+        </matra>
+      </khand>
+      
+      <!-- KHAND 1: Matras 1-4 -->
+      <khand index="1">
+        <matra index="1">
+          <tala-marker>X</tala-marker>
+          <swar duration="1">म</swar>
+          <lyric>म</lyric>
+        </matra>
+        <!-- ... matras 2-4 -->
+      </khand>
+      
+      <!-- KHAND 2: Matras 5-8 -->
+      <khand index="2">
+        <matra index="5">
+          <tala-marker>2</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 6-8 -->
+      </khand>
+      
+      <!-- KHAND 3: Matras 9-12 -->
+      <khand index="3">
+        <matra index="9">
+          <tala-marker>0</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 10-12 -->
+      </khand>
+      
+    </line>
+    
+    <!-- LINE 2: Also starts from matra 13 -->
+    <line number="2">
+      
+      <!-- KHAND 4: Matras 13-16 (FIRST) -->
+      <khand index="4">
+        <matra index="13">
+          <tala-marker>3</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 14-16 -->
+      </khand>
+      
+      <!-- KHAND 1: Matras 1-4 -->
+      <khand index="1">
+        <matra index="1">
+          <tala-marker>X</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 2-4 -->
+      </khand>
+      
+      <!-- KHAND 2: Matras 5-8 -->
+      <khand index="2">
+        <matra index="5">
+          <tala-marker>2</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 6-8 -->
+      </khand>
+      
+      <!-- KHAND 3: Matras 9-12 -->
+      <khand index="3">
+        <matra index="9">
+          <tala-marker>0</tala-marker>
+          <!-- ... -->
+        </matra>
+        <!-- ... matras 10-12 -->
+      </khand>
+      
+    </line>
+    
+  </section>
+  
+</hindustani-composition>

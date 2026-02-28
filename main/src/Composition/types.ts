@@ -21,7 +21,7 @@ export interface TaalInfo {
 }
 export interface IMetadata extends IXMLSerializable { }
 
-// Interface Contracts
+// Interface Contracts 
 export interface IXMLSerializable {
   toXML(): string;
 }
