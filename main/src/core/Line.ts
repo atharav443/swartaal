@@ -12,11 +12,11 @@ export class Line {
     toXML(): string {
         const khandXML = this.khands
             .map((khand) => khand.toXML())
-            .join('\n     ');
+            .join('\n      ');
 
-        return `<line number=${this.lineNumber}>
-           ${khandXML}
-        </line>`;
+        return `<line number="${this.lineNumber}">
+      ${khandXML}
+    </line>`;
     }
 
     addKhand(khand: Khand): void {

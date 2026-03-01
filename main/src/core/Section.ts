@@ -13,12 +13,12 @@ export class Section {
 
     toXML(): string {
         const lineXML = this.lines
-            .map((line) => line.toXML)
-            .join('\n     ');
+            .map((line) => line.toXML())
+            .join('\n    ');
 
-        return `<section name="${this.name}" startmatra="${this.startmatra}">
-        ${lineXML}
-        </section>`;
+        return `<section name="${this.name}" start-matra="${this.startmatra}">
+    ${lineXML}
+  </section>`;
     }
 
     addLine(line: Line): void {

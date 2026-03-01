@@ -36,8 +36,6 @@ export class Taal implements IXMLSerializable {
     }
 
     toXML(): string {
-        return `<taal name="${this.name}" totalmatras="${this.info.totalmatras}" khands="${this.info.khands}">
-      <khandmatras>${this.info.khandmatras.join(', ')}</khandmatras>
-    </taal>`;
+        return `<taal name="${this.name}" total-matras="${this.info.totalmatras}" khands="${this.info.khands}"/>`;
     }
 }

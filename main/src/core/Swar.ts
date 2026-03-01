@@ -1,4 +1,4 @@
-import { SwarOptions, ISwar } from './types';
+import { SwarOptions, ISwar } from '../types/types';
 
 export class Swar implements ISwar {
     private text: string;

@@ -1,0 +1,29 @@
+<hindustani-composition>
+  <metadata>
+      <title>Raga Yaman</title>
+      <raag>Yaman</raag>
+      <taal name="teentaal" total-matras="16" khands="4"/>
+    </metadata>
+  
+  <section name="स्थायी" start-matra="1">
+    <line number="1">
+      <khand index="1">
+        <matra index="1">
+          <tala-marker>X</tala-marker>
+          <swar    duration="1">Sa</swar>
+          <lyric>सा</lyric>
+        </matra>
+        <matra index="2">
+          <tala-marker>1</tala-marker>
+          <swar    duration="1">Re</swar>
+          <lyric>रे</lyric>
+        </matra>
+        <matra index="3">
+          <tala-marker>2</tala-marker>
+          <swar    duration="1">Ga</swar>
+          <lyric>ग</lyric>
+        </matra>
+      </khand>
+    </line>
+  </section>
+  </hindustani-composition>
