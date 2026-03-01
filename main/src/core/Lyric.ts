@@ -1,4 +1,4 @@
-import { ILyric } from './types';
+import { ILyric } from '../types/types';
 
 export class Lyric implements ILyric {
   private text: string;

@@ -1,5 +1,5 @@
-import { IMetadata } from './types';
-import { Taal } from './Taal';
+import { IMetadata } from '../types/types';
+import { Taal } from '../types/Taal';
 
 export class Metadata implements IMetadata {
   private title: string;

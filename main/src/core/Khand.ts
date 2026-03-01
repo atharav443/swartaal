@@ -1,5 +1,4 @@
-import { Matra } from './Matra';
-import { IKhand, IMatra } from './types';
+import { IKhand, IMatra } from '../types/types';
 
 export class Khand implements IKhand {
     private index: string;

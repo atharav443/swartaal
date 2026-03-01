@@ -1,6 +1,4 @@
-import { Lyric } from './Lyric';
-import { Swar } from './Swar';
-import { IMatra, ISwar, ILyric } from './types';
+import { IMatra, ISwar, ILyric } from '../types/types';
 
 export class Matra implements IMatra {
     private index: string;
